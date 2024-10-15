@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "pay-for-this-site": {
+    "pay-to-this-site": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/pay-for-this-site",
+            "outputPath": "dist/pay-to-this-site",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -59,10 +59,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "pay-for-this-site:build:production"
+              "buildTarget": "pay-to-this-site:build:production"
             },
             "development": {
-              "buildTarget": "pay-for-this-site:build:development"
+              "buildTarget": "pay-to-this-site:build:development"
             }
           },
           "defaultConfiguration": "development"
