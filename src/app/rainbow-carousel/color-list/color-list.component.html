@@ -1,22 +1,22 @@
-<div class="flex animate-scroll">
-    <div 
-        class="h-[25vh] rounded-lg w-[30vw] overflow-hidden mr-8 content-center" 
-        *ngFor="let color of colorsRand; let i = index" 
-        [ngClass]="color"
-    >
-        <p 
-            class="flex justify-center "
-            *ngIf="isHidden; else show"
-            >
-                {{
-                pickedEmojis[(i + colorsRand.length)]
-                }} </p>
-                
-        <ng-template #show>
-            <p class="flex justify-center ">
+
+<div 
+    class="flex h-[25vh] rounded-lg w-[30vw] overflow-hidden mr-8 items-center justify-center" 
+    *ngFor="let color of colorsRand; let i = index" 
+    [ngClass]="color"
+>
+    <p 
+        class="flex justify-center text-7xl"
+        *ngIf="isHidden; else show"
+        >
             {{
-                pickedEmojis[(i + colorsRand.length)]
-                }} </p>
-        </ng-template> 
-    </div>
+            pickedEmojis[(i + colorsRand.length)]
+            }} </p>
+            
+    <ng-template #show>
+        <p class="flex justify-center text-7xl">
+        {{
+            pickedEmojis[i]
+            }} </p>
+    </ng-template> 
 </div>
+

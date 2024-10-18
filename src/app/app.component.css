@@ -1,0 +1,15 @@
+@keyframes scroll {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  
+  }
+  
+  .animate-scroll {
+      will-change: transform;
+      animation: scroll 10s linear infinite; /* Infinite, linear scroll */
+  }
+  

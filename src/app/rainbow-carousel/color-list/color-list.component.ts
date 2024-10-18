@@ -40,13 +40,14 @@ export class ColorListComponent {
   private availableEmojis: string[] = [...this.emotes];
   // Store the picked emojis for each div
   pickedEmojis: string[] = [];
-  colorsRand = shuffle(this.colorsTotal);
+  colorsRand = this.colorsTotal;
 
   ngOnInit(): void {
-    this.pickedEmojis = this.emotes.map(() => this.pickEmoji());
+    // this.pickedEmojis = this.emotes.map(() => this.pickEmoji());
+    this.pickedEmojis = [...this.availableEmojis];
   }
 
- 
+  private counter = 0
   pickEmoji(): string {
     if (this.availableEmojis.length === 0) {
       // Reset the pool if all emojis have been used
