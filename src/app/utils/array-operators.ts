@@ -5,3 +5,8 @@ export function shuffle(array: string[]){
       } 
       return array; 
 }
+
+export function pickAndSplice(array: string[]) : string
+{
+  return array.splice(Math.floor(Math.random()*array.length), 1)[0];
+}
